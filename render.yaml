@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: car-price-app
+    env: python
+    pythonVersion: "3.11"
+    buildCommand: "pip install --upgrade pip setuptools wheel && pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
